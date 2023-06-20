@@ -14,23 +14,26 @@ public class Main {
             score(scanner.nextInt());
         } else if (a == 2) {
             table();
-        }else if (a==3){
-            maxNumber();
+        } else if (a == 3) {
+            ArrayList<Integer> r = randomList(20);
+            System.out.println(r);
+
         }
 
 
     }
 
-    private static void maxNumber() {
+    private static ArrayList<Integer> randomList(int size) {
         ArrayList<Integer> numbers = new ArrayList<>();
         Random random = new Random();
-        for (int i = 0 ; i<20;i++){
+        for (int i = 0; i < size; i++) {
             int r = random.nextInt(100);
             numbers.add(r);
         }
-        System.out.println(numbers);
+        return numbers;
 
     }
+
 
     public static void table() {
         for (int x = 1; x <= 10; x++) {
